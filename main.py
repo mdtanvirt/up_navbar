@@ -16,13 +16,13 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 #st.header('Top Nav Bar')
 
-col1, col2 = st.columns([6,.3])
+col1, col2 = st.columns([6,.5])
 with col1:
-    tab1, tab2, tab3 = st.tabs(["Files", "Nothing", "Reports"])
-    tab1.title("This is File page")
-    tab2.title("This is Nothing")
+    tab1, tab2, tab3 = st.tabs(["ABC", "File", "Reports"])
+    tab1.title("This is ABC page")
+    tab2.title("This is File")
     tab3.title("This is Report page")
 
 #col2.subheader("coleumn two")
 with col2:
-    tab_user = st.tabs(["User Icon"])
+    st.selectbox(" ", ("Profile", "Setting", "Logout"))
