@@ -20,7 +20,7 @@ col1, col2 = st.columns([6,.5])
 with col1:
     tab1, tab2, tab3 = st.tabs(["ABC", "File", "Reports"])
     tab1.title("This is ABC page")
-    tab2.title("This is File")
+    tab2.title("This is File page")
     tab3.title("This is Report page")
 
 #col2.subheader("coleumn two")
