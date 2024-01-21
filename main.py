@@ -67,7 +67,7 @@ with colItem1:
     # Insert a form in the container
     with placeholder.form("SignUp"):
         st.image("ai-prompt.webp")
-        st.markdown("<p style='color: #009698;'><style: Do not have any account. Please click Sign up button to register.</p>", unsafe_allow_html=True)
+        st.markdown("<p style='color: #009698;'>Do not have any account. Please click Sign up button to register.</p>", unsafe_allow_html=True)
         submit = st.form_submit_button("SignUp")
 
 
