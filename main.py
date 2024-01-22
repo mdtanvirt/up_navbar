@@ -5,7 +5,18 @@ from pathlib import Path
 import streamlit_authenticator as stauth
 import streamlit.components.v1 as components
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+
+st.markdown(
+    """
+<style>
+    [data-testid="collapsedControl"] {
+        display: none
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 # Hide streamlit default menu and footer from the template
 hide_st_style = """
@@ -85,15 +96,19 @@ with colItem2:
         password = st.text_input("Password", type="password")
         submit = st.form_submit_button("Login")
 
-        if submit and email == actual_email and password == actual_password:
+        if submit:
+            st.switch_page("pages/page1.py")
+
+
+        #if submit and email == actual_email and password == actual_password:
             # If the form is submitted and the email and password are correct,
             # clear the form/container and display a success message
-            placeholder.empty()
-            st.success("Login successful")
-        elif submit and email != actual_email and password != actual_password:
-            st.error("Login failed")
-        else:
-            pass
+            #placeholder.empty()
+            #st.success("Login successful")
+        #elif submit and email != actual_email and password != actual_password:
+            #st.error("Login failed")
+        #else:
+            #pass'''
 
 
 leftAln, centerAln, rightAln = st.columns([3,3, 3])
